@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { TrendingUp, Users, Award, Target, ArrowRight, Zap, Code, BarChart3 } from 'lucide-react'
+import { TrendingUp, Users, Award, Target, ArrowRight, Zap, Code, BarChart3, Clock, LineChart } from 'lucide-react'
 import PerformanceChart from './PerformanceChart'
 
 const Hero = () => {
@@ -16,41 +16,41 @@ const Hero = () => {
     {
       icon: <Users className="w-6 h-6" />,
       value: "25+",
-      label: "NITK Student Managers",
-      sublabel: "Across 6 Departments",
+      label: "NITK Capital Analysts",
+      sublabel: "Investment + Trading Teams",
       color: "text-finance-blue"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
       value: "18.7%",
-      label: "Realized Returns",
-      sublabel: "In Our First Year",
+      label: "Net Alpha Generated",
+      sublabel: "Outperforming Benchmarks",
       color: "text-finance-green"
     },
     {
       icon: <Award className="w-6 h-6" />,
       value: "87%",
-      label: "Success Rate",
-      sublabel: "47 Investment Decisions",
+      label: "Win Rate",
+      sublabel: "Across All Strategies",
       color: "text-finance-blue"
     }
   ]
 
-  const innovations = [
+  const divisions = [
     {
-      icon: <Code className="w-5 h-5" />,
-      title: "Tech-Driven Alpha",
-      description: "Python & ML algorithms for market analysis"
+      icon: <Clock className="w-5 h-5" />,
+      title: "Investment Division",
+      description: "Long-term value creation through fundamental analysis"
     },
     {
-      icon: <Zap className="w-5 h-5" />,
-      title: "Real-Time Learning",
-      description: "Live trading education for NITK students"
+      icon: <LineChart className="w-5 h-5" />,
+      title: "Trading Division", 
+      description: "Short-term alpha capture via technical analysis"
     },
     {
       icon: <Target className="w-5 h-5" />,
-      title: "Data-First Approach",
-      description: "Engineering mindset applied to finance"
+      title: "Risk Management",
+      description: "Institutional-grade portfolio protection"
     }
   ]
 
@@ -70,28 +70,28 @@ const Hero = () => {
             {/* Badge */}
             <div className="inline-flex items-center bg-finance-green/10 border border-finance-green/30 rounded-full px-6 py-3 mb-8">
               <Zap className="w-4 h-4 text-finance-green mr-2" />
-              <span className="text-finance-green font-medium">NITK's Premier Student-Run Fund</span>
+              <span className="text-finance-green font-medium">NITK's Premier Capital Management</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
-              Where{' '}
-              <span className="gradient-text">Engineering</span>
+              NH66{' '}
+              <span className="gradient-text">Capital</span>
               <br />
-              Meets{' '}
-              <span className="gradient-text">Finance</span>
+              <span className="text-finance-green">Where Alpha</span>{' '}
+              Meets Excellence
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl lg:text-2xl text-white/80 mb-8 leading-relaxed">
-              NITK students building India's most innovative campus fund. 
-              <span className="text-finance-green font-semibold"> ₹3.2 Lakh AUM</span> and growing, 
-              powered by engineering excellence and financial acumen.
+              NITK's first student-run capital management firm, focused on 
+              <span className="text-finance-green font-semibold"> public markets</span>.
+              Two specialized divisions delivering consistent alpha through disciplined strategies and deep market insights.
             </p>
 
-            {/* Innovation Highlights */}
+            {/* Division Highlights */}
             <div className="grid md:grid-cols-3 gap-4 mb-8">
-              {innovations.map((item, index) => (
+              {divisions.map((item, index) => (
                 <div key={index} className="bg-dark-100/30 border border-white/10 rounded-lg p-4 text-center hover:scale-105 transition-transform duration-300">
                   <div className="text-finance-green mb-2 flex justify-center">
                     {item.icon}
@@ -105,29 +105,29 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="btn-primary group">
-                <span>Explore Our Journey</span>
+                <span>Join the Alpha Generation</span>
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="btn-secondary">
-                View Live Performance
+                View Investment Strategies
               </button>
             </div>
 
             {/* Trust Indicators */}
             <div className="mt-8 pt-8 border-t border-white/10">
-              <div className="text-white/60 text-sm mb-4">Trusted by NITK Community</div>
+              <div className="text-white/60 text-sm mb-4">Building Tomorrow's Investment Leaders</div>
               <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-white/40 text-xs">
                 <div className="flex items-center">
                   <Award className="w-4 h-4 mr-2" />
-                  <span>1 Year Strong</span>
+                  <span>Daily Market Sessions</span>
                 </div>
                 <div className="flex items-center">
                   <Target className="w-4 h-4 mr-2" />
-                  <span>6 Departments</span>
+                  <span>Institutional Methods</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-4 h-4 mr-2" />
-                  <span>47 Investments</span>
+                  <span>Proven Track Record</span>
                 </div>
               </div>
             </div>
@@ -158,24 +158,24 @@ const Hero = () => {
             {/* Performance Chart */}
             <div className="card">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-white">Fund Performance</h3>
-                <div className="text-finance-green text-sm font-medium">+18.7% YTD</div>
+                <h3 className="text-lg font-semibold text-white">Capital Performance</h3>
+                <div className="text-finance-green text-sm font-medium">+18.7% Net Alpha</div>
               </div>
               <PerformanceChart />
             </div>
 
-            {/* Quick Stats Banner */}
+            {/* Vision Statement */}
             <div className="bg-gradient-to-r from-finance-green/10 to-finance-blue/5 border border-finance-green/30 rounded-lg p-6">
               <div className="text-center">
-                <div className="text-finance-green font-semibold mb-2">The NITK Advantage</div>
+                <div className="text-finance-green font-semibold mb-2">Our North Star</div>
                 <div className="text-white/80 text-sm leading-relaxed">
-                  "Combining technical excellence with financial innovation - 
-                  our engineering mindset delivers consistent alpha in volatile markets."
+                  "Building India's most innovative student capital management firm - 
+                  where rigorous analysis meets bold execution, and every trade is a step toward institutional excellence."
                 </div>
                 <div className="mt-4 flex justify-center space-x-6 text-xs text-white/60">
-                  <span>• Data-Driven Decisions</span>
-                  <span>• Risk-Managed Growth</span>
-                  <span>• Student-First Learning</span>
+                  <span>• Institutional Quality</span>
+                  <span>• Student Innovation</span>
+                  <span>• Market Leadership</span>
                 </div>
               </div>
             </div>

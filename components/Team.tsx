@@ -1,280 +1,364 @@
 'use client'
 
 import React from 'react'
-import { Linkedin, Mail, Github, Award, BookOpen, Code2, BarChart3 } from 'lucide-react'
+import { Github, Linkedin, Mail, TrendingUp, Code, BarChart3, Shield, Clock, LineChart, Brain, Target, Award } from 'lucide-react'
 
 const Team = () => {
-  const team = [
+  const leadership = [
     {
-      name: "Arjun Shetty",
-      role: "Fund Manager & Co-Founder",
-      year: "B.Tech 4th Year, CSE",
-      expertise: "Algorithmic Trading, Portfolio Optimization",
-      description: "Pioneering quantitative strategies with Python and machine learning. Led NH66's transition to systematic trading approaches.",
-      achievements: ["28% returns on tech portfolio", "Built automated trading system", "Published research on campus"],
+      name: "Arjun Menon",
+      role: "Chief Investment Officer",
+      department: "Computer Science, 4th Year", 
+      division: "Leadership",
+      specialization: "Investment Strategy & Portfolio Management",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-      linkedin: "#",
-      email: "arjun.shetty@student.nitk.ac.in",
-      github: "arjunshetty"
+      bio: "Leading NH66 Capital's investment strategy with focus on systematic value creation and risk-adjusted returns.",
+      github: "arjun-menon",
+      linkedin: "arjun-menon-nitk",
+      email: "arjun.menon@nh66capital.com",
+      achievements: ["18.7% portfolio alpha", "₹3.2L AUM oversight", "Risk framework architect"]
     },
     {
-      name: "Priya Nayak",
-      role: "Head of Research & Co-Founder", 
-      year: "B.Tech 4th Year, ECE",
-      expertise: "Fundamental Analysis, ESG Investing",
-      description: "Specializes in tech sector analysis and sustainable investing. Her ESG framework has become NH66's standard for ethical investments.",
-      achievements: ["ESG screening framework", "15+ detailed equity reports", "Led sustainability initiatives"],
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b05b?w=300&h=300&fit=crop&crop=face",
-      linkedin: "#",
-      email: "priya.nayak@student.nitk.ac.in",
-      github: "priyanayak"
-    },
-    {
-      name: "Karthik Rao",
-      role: "Risk Management Lead",
-      year: "B.Tech 3rd Year, ME",
-      expertise: "Risk Analytics, Derivatives Strategy",
-      description: "Mechanical engineer turned quantitative analyst. Built NH66's comprehensive risk management framework and hedging strategies.",
-      achievements: ["Risk management system", "Volatility prediction models", "Derivatives trading expertise"],
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      linkedin: "#",
-      email: "karthik.rao@student.nitk.ac.in",
-      github: "karthikrao"
-    },
-    {
-      name: "Sneha Bhat",
-      role: "Technology & Data Lead",
-      year: "B.Tech 2nd Year, IT",
-      expertise: "FinTech Development, Data Analytics", 
-      description: "Building NH66's tech infrastructure and data pipelines. Created the portfolio tracking system and automated reporting tools.",
-      achievements: ["Portfolio dashboard", "Data analytics pipeline", "Mobile trading app prototype"],
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&h=300&fit=crop&crop=face",
-      linkedin: "#",
-      email: "sneha.bhat@student.nitk.ac.in",
-      github: "snehab"
-    },
-    {
-      name: "Rohit Pai",
-      role: "Sector Analyst - Finance",
-      year: "B.Tech 3rd Year, Chemical",
-      expertise: "Banking & NBFC Analysis, Credit Research",
-      description: "Chemical engineering background provides unique perspective on process optimization in financial services sector analysis.",
-      achievements: ["Banking sector deep-dive", "Credit risk models", "NBFC comparison framework"],
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
-      linkedin: "#",
-      email: "rohit.pai@student.nitk.ac.in",
-      github: "rohitpai"
-    },
-    {
-      name: "Ananya Kulkarni",
-      role: "Junior Analyst",
-      year: "B.Tech 1st Year, CSE",
-      expertise: "Market Research, Social Media Analytics",
-      description: "Youngest team member bringing fresh perspectives on consumer trends and social sentiment analysis for investment decisions.",
-      achievements: ["Social sentiment indicator", "Consumer trend reports", "Campus investment surveys"],
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
-      linkedin: "#",
-      email: "ananya.kulkarni@student.nitk.ac.in", 
-      github: "ananyak"
-    },
-    {
-      name: "Vikram Shenoy",
-      role: "Alumni Advisor",
-      year: "NITK Alumni '23, Currently at Goldman Sachs",
-      expertise: "Investment Banking, Startup Ecosystem",
-      description: "Provides industry insights and mentorship. Bridges the gap between academic learning and professional finance practice.",
-      achievements: ["Industry mentorship", "Network connections", "Career guidance for team"],
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face",
-      linkedin: "#",
-      email: "vikram.shenoy@gs.com",
-      github: "vikramshenoy"
-    },
-    {
-      name: "Meera Hegde", 
-      role: "Operations & Compliance",
-      year: "B.Tech 2nd Year, Civil",
-      expertise: "Process Optimization, Regulatory Compliance",
-      description: "Applies engineering project management skills to ensure smooth fund operations and regulatory adherence.",
-      achievements: ["Operations framework", "Compliance procedures", "Investor relations system"],
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&h=300&fit=crop&crop=face",
-      linkedin: "#",
-      email: "meera.hegde@student.nitk.ac.in",
-      github: "meerah"
+      name: "Priya Sharma",
+      role: "Chief Trading Officer", 
+      department: "Electronics & Communication, 4th Year",
+      division: "Leadership",
+      specialization: "Technical Analysis & Short-term Alpha",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
+      bio: "Directing our trading operations with expertise in technical analysis and systematic momentum strategies.",
+      github: "priya-sharma-nitk",
+      linkedin: "priya-sharma-trading",
+      email: "priya.sharma@nh66capital.com",
+      achievements: ["87% win rate", "₹1.1L trading profits", "Volatility expert"]
     }
   ]
 
-  const departmentStats = [
-    { dept: "Computer Science", count: 8, percentage: "32%" },
-    { dept: "Electronics & Comm", count: 5, percentage: "20%" },
-    { dept: "Mechanical", count: 4, percentage: "16%" },
-    { dept: "Information Technology", count: 3, percentage: "12%" },
-    { dept: "Chemical", count: 2, percentage: "8%" },
-    { dept: "Civil", count: 2, percentage: "8%" },
-    { dept: "Alumni", count: 1, percentage: "4%" }
+  const investmentTeam = [
+    {
+      name: "Karthik Rao",
+      role: "Senior Investment Analyst",
+      department: "Mechanical Engineering, 3rd Year",
+      division: "Investment Division",
+      specialization: "Fundamental Analysis & ESG Research",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+      bio: "Deep-value investing specialist with focus on sustainable long-term returns and ESG integration.",
+      github: "karthik-rao",
+      linkedin: "karthik-rao-analyst", 
+      email: "karthik.rao@nh66capital.com",
+      achievements: ["12 successful stock picks", "ESG framework lead", "Pharma sector expert"]
+    },
+    {
+      name: "Ananya Kulkarni",
+      role: "Quantitative Research Analyst",
+      department: "Computer Science, 2nd Year",
+      division: "Investment Division",
+      specialization: "Algorithmic Strategy Development",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+      bio: "Building quantitative models for systematic investment decisions and portfolio optimization.",
+      github: "ananya-quant",
+      linkedin: "ananya-kulkarni-quant",
+      email: "ananya.kulkarni@nh66capital.com", 
+      achievements: ["Python trading models", "ML prediction systems", "Data pipeline architect"]
+    },
+    {
+      name: "Rohan Gupta",
+      role: "Sector Research Lead",
+      department: "Chemical Engineering, 3rd Year", 
+      division: "Investment Division",
+      specialization: "Industry Analysis & Valuation",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
+      bio: "Leading sector-specific research with expertise in industrial analysis and competitive positioning.",
+      github: "rohan-sector",
+      linkedin: "rohan-gupta-research",
+      email: "rohan.gupta@nh66capital.com",
+      achievements: ["Chemical sector specialist", "₹500k+ sector returns", "Industry expert network"]
+    }
   ]
 
+  const tradingTeam = [
+    {
+      name: "Sneha Bhat",
+      role: "Lead Technical Analyst",
+      department: "Information Technology, 3rd Year",
+      division: "Trading Division", 
+      specialization: "Chart Pattern Recognition & Momentum",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face",
+      bio: "Expert in technical analysis with proven track record in identifying high-probability trading setups.",
+      github: "sneha-tech-analysis",
+      linkedin: "sneha-bhat-trading",
+      email: "sneha.bhat@nh66capital.com",
+      achievements: ["₹400k+ trading profits", "Pattern recognition expert", "Risk management systems"]
+    },
+    {
+      name: "Vikram Reddy", 
+      role: "Options & Derivatives Specialist",
+      department: "Electrical Engineering, 4th Year",
+      division: "Trading Division",
+      specialization: "Complex Derivatives & Volatility Trading", 
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face",
+      bio: "Sophisticated derivatives strategies and volatility trading for enhanced portfolio returns.",
+      github: "vikram-derivatives",
+      linkedin: "vikram-reddy-options",
+      email: "vikram.reddy@nh66capital.com",
+      achievements: ["Options strategy expert", "Volatility arbitrage", "Derivatives education lead"]
+    },
+    {
+      name: "Rahul Kumar",
+      role: "Day Trading Specialist", 
+      department: "Electronics & Electrical, 2nd Year",
+      division: "Trading Division",
+      specialization: "Intraday Momentum & Scalping",
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=300&h=300&fit=crop&crop=face", 
+      bio: "High-frequency trading strategies and intraday momentum capture for consistent daily alpha.",
+      github: "rahul-daytrading",
+      linkedin: "rahul-kumar-trader",
+      email: "rahul.kumar@nh66capital.com",
+      achievements: ["Daily profit consistency", "Scalping strategies", "Market psychology expert"]
+    }
+  ]
+
+  const riskTeam = [
+    {
+      name: "Aditi Singh",
+      role: "Chief Risk Officer",
+      department: "Civil Engineering, 4th Year",
+      division: "Risk Management",
+      specialization: "Portfolio Risk & Compliance",
+      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&h=300&fit=crop&crop=face",
+      bio: "Overseeing comprehensive risk management frameworks and ensuring institutional-grade compliance.",
+      github: "aditi-risk-mgmt",
+      linkedin: "aditi-singh-risk", 
+      email: "aditi.singh@nh66capital.com",
+      achievements: ["Risk framework architect", "Compliance systems", "Capital allocation model"]
+    }
+  ]
+
+  const divisionStats = [
+    {
+      icon: <Clock className="w-6 h-6" />,
+      division: "Investment Division",
+      members: 8,
+      focus: "Long-term Value Creation",
+      performance: "+24.3% Average Return",
+      color: "text-finance-green"
+    },
+    {
+      icon: <LineChart className="w-6 h-6" />, 
+      division: "Trading Division",
+      members: 6,
+      focus: "Short-term Alpha Capture", 
+      performance: "87% Win Rate",
+      color: "text-finance-blue"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      division: "Risk Management",
+      members: 3,
+      focus: "Portfolio Protection",
+      performance: "0.95 Sharpe Ratio",
+      color: "text-finance-green"
+    }
+  ]
+
+  const TeamMemberCard = ({ member }: any) => (
+    <div className="card group hover:scale-105 transition-all duration-300">
+      <div className="relative mb-6">
+        <img 
+          src={member.image} 
+          alt={member.name}
+          className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-finance-green/30 group-hover:border-finance-green/60 transition-colors duration-300"
+        />
+        <div className={`absolute -bottom-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center ${
+          member.division === 'Investment Division' ? 'bg-finance-green/20 border-2 border-finance-green' :
+          member.division === 'Trading Division' ? 'bg-finance-blue/20 border-2 border-finance-blue' :
+          member.division === 'Risk Management' ? 'bg-purple-500/20 border-2 border-purple-500' :
+          'bg-finance-green/20 border-2 border-finance-green'
+        }`}>
+          {member.division === 'Investment Division' ? <BarChart3 className="w-4 h-4 text-finance-green" /> :
+           member.division === 'Trading Division' ? <TrendingUp className="w-4 h-4 text-finance-blue" /> :
+           member.division === 'Risk Management' ? <Shield className="w-4 h-4 text-purple-500" /> :
+           <Award className="w-4 h-4 text-finance-green" />}
+        </div>
+      </div>
+
+      <div className="text-center mb-4">
+        <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
+        <p className="text-finance-green font-medium text-sm mb-1">{member.role}</p>
+        <p className="text-white/60 text-xs mb-2">{member.department}</p>
+        <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${
+          member.division === 'Investment Division' ? 'bg-finance-green/20 text-finance-green' :
+          member.division === 'Trading Division' ? 'bg-finance-blue/20 text-finance-blue' :
+          member.division === 'Risk Management' ? 'bg-purple-500/20 text-purple-500' :
+          'bg-finance-green/20 text-finance-green'
+        }`}>
+          {member.division}
+        </div>
+      </div>
+
+      <div className="mb-4">
+        <h4 className="text-white font-semibold text-sm mb-1">Specialization</h4>
+        <p className="text-white/70 text-xs">{member.specialization}</p>
+      </div>
+
+      <p className="text-white/80 text-sm mb-4 leading-relaxed">{member.bio}</p>
+
+      {member.achievements && (
+        <div className="mb-4">
+          <h4 className="text-white font-semibold text-sm mb-2">Key Achievements</h4>
+          <div className="space-y-1">
+            {member.achievements.map((achievement: string, index: number) => (
+              <div key={index} className="flex items-center text-xs text-white/70">
+                <div className="w-1 h-1 bg-finance-green rounded-full mr-2"></div>
+                {achievement}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div className="flex justify-center space-x-4 pt-4 border-t border-white/10">
+        <a href={`https://github.com/${member.github}`} className="text-white/60 hover:text-finance-green transition-colors">
+          <Github className="w-4 h-4" />
+        </a>
+        <a href={`https://linkedin.com/in/${member.linkedin}`} className="text-white/60 hover:text-finance-green transition-colors">
+          <Linkedin className="w-4 h-4" />
+        </a>
+        <a href={`mailto:${member.email}`} className="text-white/60 hover:text-finance-green transition-colors">
+          <Mail className="w-4 h-4" />
+        </a>
+      </div>
+    </div>
+  )
+
   return (
-    <section id="team" className="py-20 bg-black">
+    <section id="team" className="py-20 bg-gradient-to-b from-dark-50/30 to-black">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-finance-green/10 border border-finance-green/30 rounded-full px-6 py-2 mb-6">
-            <Award className="w-4 h-4 text-finance-green mr-2" />
-            <span className="text-finance-green font-medium text-sm">NITK's Finest Minds</span>
+          <div className="inline-flex items-center bg-finance-green/10 border border-finance-green/30 rounded-full px-6 py-3 mb-6">
+            <Brain className="w-4 h-4 text-finance-green mr-2" />
+            <span className="text-finance-green font-medium">Our Capital Team</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Meet Our <span className="gradient-text">Student Leaders</span>
+          
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+            Meet the <span className="gradient-text">Alpha Generators</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            From first-year innovators to fourth-year leaders, our diverse team of NITK students brings 
-            engineering excellence to financial markets. Each member contributes unique skills and perspectives.
+          
+          <p className="text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+            25+ of NITK's brightest minds working across <span className="text-finance-green font-semibold">Investment</span> and 
+            <span className="text-finance-blue font-semibold"> Trading</span> divisions. Each analyst brings engineering rigor 
+            to financial markets, building tomorrow's investment management leaders today.
           </p>
         </div>
 
-        {/* Department Distribution */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center mb-8 text-white">
-            Cross-Departmental <span className="text-finance-green">Expertise</span>
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-6xl mx-auto">
-            {departmentStats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="card hover:scale-105 transition-transform duration-300 p-4">
-                  <div className="text-2xl font-bold text-finance-green mb-1">{stat.count}</div>
-                  <div className="text-xs text-white/60 mb-2">{stat.dept}</div>
-                  <div className="text-sm text-white/80 font-medium">{stat.percentage}</div>
+        {/* Division Overview */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {divisionStats.map((stat, index) => (
+            <div key={index} className="card text-center">
+              <div className={`${stat.color} mb-4 mx-auto`}>
+                {stat.icon}
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">{stat.division}</h3>
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-white/60">Team Size:</span>
+                  <span className="text-white font-medium">{stat.members} members</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-white/60">Focus:</span>
+                  <span className="text-white font-medium">{stat.focus}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-white/60">Performance:</span>
+                  <span className={`font-medium ${stat.color}`}>{stat.performance}</span>
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Leadership Team */}
+        <div className="mb-20">
+          <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+            <Award className="w-6 h-6 text-finance-green mr-3" />
+            Leadership Team
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {leadership.map((member) => (
+              <TeamMemberCard key={member.name} member={member} />
             ))}
           </div>
         </div>
 
-        {/* Core Leadership Team */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-12 text-white">
-            Core <span className="text-finance-green">Leadership</span>
+        {/* Investment Division */}
+        <div className="mb-20">
+          <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+            <Clock className="w-6 h-6 text-finance-green mr-3" />
+            Investment Division
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {team.slice(0, 4).map((member, index) => (
-              <div key={index} className="card group hover:scale-105 transition-all duration-300">
-                <div className="relative mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 rounded-full bg-finance-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                
-                <div className="text-center">
-                  <h4 className="text-xl font-bold text-white mb-2">{member.name}</h4>
-                  <p className="text-finance-green font-medium mb-2">{member.role}</p>
-                  <p className="text-sm text-white/60 mb-3">{member.year}</p>
-                  <p className="text-xs text-finance-green/80 mb-4 font-medium">{member.expertise}</p>
-                  
-                  <p className="text-white/70 text-sm leading-relaxed mb-4">
-                    {member.description}
-                  </p>
-                  
-                  {/* Key Achievements */}
-                  <div className="mb-4">
-                    <div className="text-xs text-white/50 mb-2">Key Achievements:</div>
-                    <div className="space-y-1">
-                      {member.achievements.slice(0, 2).map((achievement, i) => (
-                        <div key={i} className="text-xs bg-finance-green/10 text-finance-green px-2 py-1 rounded">
-                          {achievement}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Contact Links */}
-                  <div className="flex justify-center space-x-3">
-                    <a href={member.linkedin} className="text-white/60 hover:text-finance-green transition-colors">
-                      <Linkedin className="w-4 h-4" />
-                    </a>
-                    <a href={`mailto:${member.email}`} className="text-white/60 hover:text-finance-green transition-colors">
-                      <Mail className="w-4 h-4" />
-                    </a>
-                    <a href={`https://github.com/${member.github}`} className="text-white/60 hover:text-finance-green transition-colors">
-                      <Github className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Extended Team */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-12 text-white">
-            Extended <span className="text-finance-green">Team</span>
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.slice(4).map((member, index) => (
-              <div key={index} className="card group hover:scale-105 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-16 h-16 rounded-full object-cover mr-4 group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div>
-                    <h4 className="text-lg font-bold text-white">{member.name}</h4>
-                    <p className="text-finance-green text-sm font-medium">{member.role}</p>
-                    <p className="text-xs text-white/60">{member.year}</p>
-                  </div>
-                </div>
-                
-                <p className="text-white/70 text-sm leading-relaxed mb-3">
-                  {member.description}
-                </p>
-                
-                <div className="text-xs text-finance-green/80 mb-3">{member.expertise}</div>
-                
-                {/* Contact Links */}
-                <div className="flex space-x-3">
-                  <a href={member.linkedin} className="text-white/60 hover:text-finance-green transition-colors">
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                  <a href={`mailto:${member.email}`} className="text-white/60 hover:text-finance-green transition-colors">
-                    <Mail className="w-4 h-4" />
-                  </a>
-                  <a href={`https://github.com/${member.github}`} className="text-white/60 hover:text-finance-green transition-colors">
-                    <Github className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Join Our Team */}
-        <div className="card bg-gradient-to-r from-finance-green/10 to-finance-blue/5 border-finance-green/30 text-center">
-          <BookOpen className="w-12 h-12 text-finance-green mx-auto mb-4" />
-          <h3 className="text-2xl font-bold mb-4 text-white">Join the NH66 Family</h3>
-          <p className="text-white/80 leading-relaxed max-w-2xl mx-auto mb-6">
-            We're always looking for passionate NITK students who want to learn finance hands-on. 
-            Whether you're from CSE, ECE, ME, or any other department - your unique perspective can contribute to our success.
+          <p className="text-center text-white/70 mb-8 max-w-2xl mx-auto">
+            Long-term value creation through rigorous fundamental analysis and patient capital deployment
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <div className="flex items-center bg-finance-green/20 px-4 py-2 rounded-full">
-              <Code2 className="w-4 h-4 text-finance-green mr-2" />
-              <span className="text-finance-green text-sm">Technical Skills</span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {investmentTeam.map((member) => (
+              <TeamMemberCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+
+        {/* Trading Division */}
+        <div className="mb-20">
+          <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+            <LineChart className="w-6 h-6 text-finance-blue mr-3" />
+            Trading Division
+          </h3>
+          <p className="text-center text-white/70 mb-8 max-w-2xl mx-auto">
+            Short-term alpha capture through technical analysis and systematic momentum strategies
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tradingTeam.map((member) => (
+              <TeamMemberCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+
+        {/* Risk Management */}
+        <div className="mb-20">
+          <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+            <Shield className="w-6 h-6 text-purple-500 mr-3" />
+            Risk Management
+          </h3>
+          <p className="text-center text-white/70 mb-8 max-w-2xl mx-auto">
+            Institutional-grade risk frameworks ensuring capital preservation across all strategies
+          </p>
+          <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-6 max-w-md mx-auto">
+            {riskTeam.map((member) => (
+              <TeamMemberCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+
+        {/* Join the Team CTA */}
+        <div className="text-center">
+          <div className="card bg-gradient-to-r from-finance-green/10 to-finance-blue/5 border-finance-green/30 max-w-2xl mx-auto">
+            <Target className="w-8 h-8 text-finance-green mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-4">Join NH66 Capital</h3>
+            <p className="text-white/80 mb-6 leading-relaxed">
+              Ready to build the future of student capital management? We're always looking for analytical minds 
+              passionate about markets and committed to institutional excellence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="btn-primary">
+                Investment Division Applications
+              </button>
+              <button className="btn-secondary">
+                Trading Division Applications
+              </button>
             </div>
-            <div className="flex items-center bg-finance-green/20 px-4 py-2 rounded-full">
-              <BarChart3 className="w-4 h-4 text-finance-green mr-2" />
-              <span className="text-finance-green text-sm">Finance Interest</span>
-            </div>
-            <div className="flex items-center bg-finance-green/20 px-4 py-2 rounded-full">
-              <Award className="w-4 h-4 text-finance-green mr-2" />
-              <span className="text-finance-green text-sm">Leadership Potential</span>
+            <div className="mt-6 text-sm text-white/60">
+              Open to all NITK students across departments • Rolling applications • Competitive selection
             </div>
           </div>
-          <button className="btn-primary">
-            Apply to Join Our Team
-          </button>
         </div>
       </div>
     </section>

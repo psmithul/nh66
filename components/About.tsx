@@ -1,109 +1,286 @@
 'use client'
 
 import React from 'react'
-import { Target, Eye, Award, Users, TrendingUp, Shield, BookOpen, Lightbulb, Globe, Zap } from 'lucide-react'
+import { TrendingUp, Users, Target, Award, BarChart3, Calendar, Clock, Zap, Brain, Shield, Globe, BookOpen, LineChart, Building } from 'lucide-react'
 
 const About = () => {
-  const values = [
+  const journeyMilestones = [
     {
-      icon: <BookOpen className="w-8 h-8" />,
-      title: "Learn by Doing",
-      description: "Hands-on financial education where NITK students manage real capital and gain practical experience."
+      quarter: "Q4 2023",
+      title: "Foundation",
+      description: "Founded NH66 Capital with ₹50K seed funding",
+      achievement: "Established dual-division structure",
+      color: "border-finance-blue/50 bg-finance-blue/5"
     },
     {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Innovation First",
-      description: "Leveraging engineering mindset to develop cutting-edge investment strategies and fintech solutions."
+      quarter: "Q1 2024", 
+      title: "Team Building",
+      description: "Recruited 25+ top NITK students across disciplines",
+      achievement: "Built Investment & Trading teams",
+      color: "border-finance-green/50 bg-finance-green/5"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Collaborative Growth",
-      description: "Multi-year collaboration where seniors mentor juniors, creating a sustainable knowledge ecosystem."
+      quarter: "Q2 2024",
+      title: "Market Entry",
+      description: "Deployed systematic strategies in public markets",
+      achievement: "First profitable quarter +12.3%",
+      color: "border-finance-blue/50 bg-finance-blue/5"
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Tech-Driven Alpha",
-      description: "Using Python, ML models, and data analytics to identify market opportunities and optimize portfolios."
+      quarter: "Q3 2024",
+      title: "Scale & Systems", 
+      description: "Implemented institutional-grade risk management",
+      achievement: "AUM growth to ₹2.1L",
+      color: "border-finance-green/50 bg-finance-green/5"
+    },
+    {
+      quarter: "Q4 2024",
+      title: "Alpha Generation",
+      description: "Consistent outperformance across market cycles",
+      achievement: "₹3.2L AUM, 18.7% net returns",
+      color: "border-finance-blue/50 bg-finance-blue/5"
     }
   ]
 
-  const achievements = [
-    { metric: "₹3.2 Lakh", label: "Assets Under Management", sublabel: "Growing 180% YoY", trend: "+180%" },
-    { metric: "25+", label: "Active Student Managers", sublabel: "Across all NITK years", trend: "B.Tech 1st-4th + Alumni" },
-    { metric: "18.7%", label: "Realized Returns", sublabel: "In our first year", trend: "+18.7%" },
-    { metric: "47", label: "Investment Decisions", sublabel: "Data-driven analysis", trend: "87% Success Rate" },
+  const impactMetrics = [
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      value: "₹3.2L",
+      label: "Assets Under Management",
+      growth: "+180% YoY",
+      color: "text-finance-green"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      value: "18.7%",
+      label: "Net Alpha Generated",
+      growth: "vs 6.2% benchmark",
+      color: "text-finance-blue"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      value: "25+",
+      label: "Student Analysts",
+      growth: "Across both divisions",
+      color: "text-finance-green"
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      value: "87%",
+      label: "Strategy Win Rate", 
+      growth: "Institutional quality",
+      color: "text-finance-blue"
+    }
   ]
 
-  const milestones = [
+  const divisions = [
     {
-      month: "Dec 2023",
-      title: "Fund Inception",
-      description: "Started with ₹50k from founding NITK students",
-      value: "₹50k"
+      icon: <Clock className="w-8 h-8" />,
+      title: "Investment Division",
+      subtitle: "Long-Term Value Creation",
+      description: "Our Investment Division focuses on the long game through rigorous fundamental analysis and bottom-up research. We identify undervalued opportunities and hold positions for quarters to years, designed to compound value through patient, disciplined investing.",
+      strategies: [
+        "Deep fundamental analysis",
+        "Bottom-up stock selection", 
+        "Long-term value investing",
+        "Sector rotation strategies"
+      ],
+      metrics: {
+        horizon: "6-24 months",
+        focus: "Quality & Growth",
+        approach: "Research-driven"
+      }
     },
     {
-      month: "Mar 2024", 
-      title: "First Major Win",
-      description: "Tech sector investments yield 28% returns",
-      value: "₹1.2L"
+      icon: <LineChart className="w-8 h-8" />,
+      title: "Trading Division", 
+      subtitle: "Short-Term Alpha Capture",
+      description: "Fast-paced and chart-driven, our Trading Division lives and breathes technical analysis. This team identifies short-term market setups, executes swift trades, and masters risk management on the fly to capture alpha from market inefficiencies.",
+      strategies: [
+        "Technical pattern recognition",
+        "Momentum trading",
+        "Mean reversion strategies", 
+        "Options & derivatives"
+      ],
+      metrics: {
+        horizon: "Minutes to weeks",
+        focus: "Momentum & Trends",
+        approach: "Chart-driven"
+      }
+    }
+  ]
+
+  const nitk = [
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "Analytical Mindset",
+      description: "Engineering training provides systematic problem-solving and quantitative skills essential for market analysis."
     },
     {
-      month: "Jun 2024",
-      title: "Team Expansion",
-      description: "Onboarded juniors across departments",
-      value: "₹2.1L"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Risk Management",
+      description: "Technical background ensures disciplined approach to position sizing and portfolio risk management."
     },
     {
-      month: "Dec 2024",
-      title: "Current Status",
-      description: "Established campus-wide recognition",
-      value: "₹3.2L"
+      icon: <Globe className="w-6 h-6" />,
+      title: "Innovation Focus",
+      description: "NITK's innovation culture drives us to develop proprietary tools and systematic trading strategies."
+    },
+    {
+      icon: <Building className="w-6 h-6" />,
+      title: "Institutional Aspiration",
+      description: "We're building tomorrow's investment management leaders with institutional-quality processes today."
     }
   ]
 
   return (
-    <section id="about" className="py-20 bg-dark-50/20">
+    <section id="about" className="py-20 bg-gradient-to-b from-black to-dark-50">
       <div className="container mx-auto px-6">
-        {/* Header with Impact Statement */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-finance-green/10 border border-finance-green/30 rounded-full px-6 py-2 mb-6">
-            <Globe className="w-4 h-4 text-finance-green mr-2" />
-            <span className="text-finance-green font-medium text-sm">From NITK Campus to Market Leaders</span>
+          <div className="inline-flex items-center bg-finance-green/10 border border-finance-green/30 rounded-full px-6 py-3 mb-6">
+            <BookOpen className="w-4 h-4 text-finance-green mr-2" />
+            <span className="text-finance-green font-medium">Our Story</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Where <span className="gradient-text">Engineering Meets Finance</span>
+          
+          <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+            What is{' '}
+            <span className="gradient-text">NH66 Capital</span>?
           </h2>
+          
           <p className="text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
-            In just one year, NITK students have built India's most innovative campus fund - combining 
-            technical expertise with financial acumen to deliver exceptional returns and real-world learning.
+            NITK's first <span className="text-finance-green font-semibold">student-run capital management firm</span>, 
+            focused on public markets. Where undergraduates roll up their sleeves and dive deep into the markets, 
+            together - building institutional-quality investment processes while learning from every trade.
           </p>
+        </div>
+
+        {/* What We Do Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">What We Do</h3>
+            <p className="text-white/70 max-w-2xl mx-auto">
+              Two specialized divisions working in harmony to generate consistent alpha across market cycles
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {divisions.map((division, index) => (
+              <div key={index} className="card group hover:border-finance-green/50 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  <div className="text-finance-green mr-4 group-hover:scale-110 transition-transform duration-300">
+                    {division.icon}
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white">{division.title}</h4>
+                    <p className="text-finance-green text-sm">{division.subtitle}</p>
+                  </div>
+                </div>
+
+                <p className="text-white/80 mb-6 leading-relaxed">
+                  {division.description}
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <h5 className="text-white font-semibold mb-3">Core Strategies</h5>
+                    <ul className="space-y-2">
+                      {division.strategies.map((strategy, idx) => (
+                        <li key={idx} className="text-white/70 text-sm flex items-center">
+                          <div className="w-1 h-1 bg-finance-green rounded-full mr-3"></div>
+                          {strategy}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="bg-dark-100/30 rounded-lg p-4">
+                    <h5 className="text-white font-semibold mb-3">Division Metrics</h5>
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span className="text-white/60 text-sm">Time Horizon:</span>
+                        <span className="text-finance-green text-sm font-medium">{division.metrics.horizon}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60 text-sm">Focus:</span>
+                        <span className="text-finance-green text-sm font-medium">{division.metrics.focus}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60 text-sm">Approach:</span>
+                        <span className="text-finance-green text-sm font-medium">{division.metrics.approach}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Daily Sessions */}
+        <div className="mb-20">
+          <div className="card bg-gradient-to-r from-finance-green/10 to-finance-blue/5 border-finance-green/30">
+            <div className="text-center">
+              <div className="text-finance-green mb-4">
+                <Calendar className="w-8 h-8 mx-auto" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Why NH66 Capital?</h3>
+              <p className="text-white/80 max-w-3xl mx-auto leading-relaxed mb-6">
+                Every weekday morning, we kick off with an <span className="text-finance-green font-semibold">open-floor market discussion</span> - 
+                breaking down overnight news, sharing sector insights, and debating the biggest moves of the day. 
+                It's hands-on learning where members present mini-case studies, lead chart reviews, and challenge each other's theses 
+                so we all sharpen our analytical skills and market instincts.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-4 mt-8">
+                <div className="bg-dark-100/30 rounded-lg p-4">
+                  <Clock className="w-6 h-6 text-finance-green mx-auto mb-2" />
+                  <div className="text-white font-semibold text-sm">Daily Sessions</div>
+                  <div className="text-white/60 text-xs">Morning market discussions</div>
+                </div>
+                <div className="bg-dark-100/30 rounded-lg p-4">
+                  <Brain className="w-6 h-6 text-finance-green mx-auto mb-2" />
+                  <div className="text-white font-semibold text-sm">Case Studies</div>
+                  <div className="text-white/60 text-xs">Member-led analysis</div>
+                </div>
+                <div className="bg-dark-100/30 rounded-lg p-4">
+                  <Target className="w-6 h-6 text-finance-green mx-auto mb-2" />
+                  <div className="text-white font-semibold text-sm">Peer Learning</div>
+                  <div className="text-white/60 text-xs">Challenge each other's theses</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* One Year Journey */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-12">
-            Our <span className="text-finance-green">One Year Journey</span>
-          </h3>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">Our Journey to Alpha</h3>
+            <p className="text-white/70 max-w-2xl mx-auto">
+              From ₹50K seed funding to ₹3.2L AUM in 12 months - building institutional quality with student innovation
+            </p>
+          </div>
+
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-finance-green via-finance-green/50 to-transparent"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-finance-green to-finance-blue opacity-30"></div>
             
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12 text-left'}`}>
-                    <div className="card hover:scale-105 transition-transform duration-300">
-                      <div className="text-finance-green font-semibold mb-2">{milestone.month}</div>
-                      <h4 className="text-xl font-bold text-white mb-2">{milestone.title}</h4>
-                      <p className="text-white/70 mb-3">{milestone.description}</p>
-                      <div className="text-2xl font-bold text-finance-green">{milestone.value}</div>
-                    </div>
-                  </div>
-                  
+            <div className="space-y-8">
+              {journeyMilestones.map((milestone, index) => (
+                <div key={index} className={`relative ${index % 2 === 0 ? 'lg:text-right lg:pr-1/2' : 'lg:text-left lg:pl-1/2'}`}>
                   {/* Timeline Dot */}
-                  <div className="relative z-10 w-4 h-4 bg-finance-green rounded-full border-4 border-black"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-finance-green rounded-full border-4 border-black z-10"></div>
                   
-                  <div className="w-1/2"></div>
+                  <div className={`card ${milestone.color} border max-w-md ${index % 2 === 0 ? 'lg:ml-auto lg:mr-8' : 'lg:mr-auto lg:ml-8'}`}>
+                    <div className="flex justify-between items-start mb-3">
+                      <span className="text-finance-green text-sm font-medium">{milestone.quarter}</span>
+                      <span className="text-white/60 text-xs">{index + 1}/5</span>
+                    </div>
+                    <h4 className="text-lg font-bold text-white mb-2">{milestone.title}</h4>
+                    <p className="text-white/80 text-sm mb-3">{milestone.description}</p>
+                    <div className="text-finance-green text-sm font-medium">{milestone.achievement}</div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -111,93 +288,70 @@ const About = () => {
         </div>
 
         {/* Impact Metrics */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {achievements.map((item, index) => (
-            <div key={index} className="metric-card text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl lg:text-4xl font-bold text-finance-green mb-2">
-                {item.metric}
-              </div>
-              <div className="text-white font-medium mb-1">
-                {item.label}
-              </div>
-              <div className="text-sm text-white/60 mb-2">
-                {item.sublabel}
-              </div>
-              <div className="text-xs bg-finance-green/20 text-finance-green px-2 py-1 rounded-full">
-                {item.trend}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Mission & Vision with NITK Focus */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="card group hover:scale-105 transition-transform duration-300">
-            <div className="flex items-center mb-4">
-              <Target className="w-6 h-6 text-finance-green mr-3" />
-              <h3 className="text-2xl font-bold">Our Mission</h3>
-            </div>
-            <p className="text-white/80 leading-relaxed mb-4">
-              To create India's premier student-managed investment fund where NITK's brightest engineering minds 
-              learn practical finance, develop market expertise, and generate sustainable returns through 
-              data-driven investment strategies.
-            </p>
-            <p className="text-white/80 leading-relaxed">
-              We bridge the gap between theoretical knowledge and real-world application, empowering students 
-              to become tomorrow's fintech leaders while delivering consistent value to our investor community.
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">Impact Metrics</h3>
+            <p className="text-white/70">
+              Institutional-quality results powered by student innovation
             </p>
           </div>
 
-          <div className="card group hover:scale-105 transition-transform duration-300">
-            <div className="flex items-center mb-4">
-              <Eye className="w-6 h-6 text-finance-green mr-3" />
-              <h3 className="text-2xl font-bold">Our Vision</h3>
-            </div>
-            <p className="text-white/80 leading-relaxed mb-4">
-              To become the blueprint for student-led financial innovation across Indian technical institutions, 
-              setting new standards for campus-based investment management and experiential learning.
-            </p>
-            <p className="text-white/80 leading-relaxed">
-              We envision a future where every engineering student has access to practical finance education 
-              and the opportunity to contribute to India's financial ecosystem while still in college.
-            </p>
-          </div>
-        </div>
-
-        {/* The NITK Advantage */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-12">
-            The <span className="text-finance-green">NITK Advantage</span>
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="card text-center group hover:scale-105 transition-transform duration-300">
-                <div className="flex justify-center mb-4 text-finance-green group-hover:scale-110 transition-transform duration-300">
-                  {value.icon}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {impactMetrics.map((metric, index) => (
+              <div key={index} className="metric-card group hover:scale-105 transition-transform duration-300">
+                <div className={`${metric.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  {metric.icon}
                 </div>
-                <h4 className="text-xl font-semibold mb-3 text-white">
-                  {value.title}
-                </h4>
-                <p className="text-white/70 leading-relaxed">
-                  {value.description}
-                </p>
+                <div className={`text-3xl font-bold ${metric.color} mb-2`}>
+                  {metric.value}
+                </div>
+                <div className="text-white font-medium text-sm mb-2">
+                  {metric.label}
+                </div>
+                <div className="text-white/60 text-xs">
+                  {metric.growth}
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Why We Started */}
-        <div className="card bg-gradient-to-r from-finance-green/10 to-finance-blue/5 border-finance-green/30">
-          <div className="text-center">
-            <Award className="w-12 h-12 text-finance-green mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-4">Why We Started NH66 Fund</h3>
-            <p className="text-white/80 leading-relaxed max-w-3xl mx-auto mb-6">
-              "As engineering students, we saw a gap between our technical skills and financial literacy. 
-              We created NH66 Fund not just to generate returns, but to build a learning ecosystem where 
-              NITK students can gain practical finance experience while contributing to their own financial future."
+        {/* NITK Advantage */}
+        <div>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">The NITK Advantage</h3>
+            <p className="text-white/70 max-w-2xl mx-auto">
+              Our engineering foundation provides unique advantages in systematic investing and risk management
             </p>
-            <div className="text-sm text-finance-green font-medium">
-              - Founding Team, NH66 Fund
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {nitk.map((advantage, index) => (
+              <div key={index} className="card group hover:border-finance-green/50 transition-all duration-300">
+                <div className="text-finance-green mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {advantage.icon}
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-3">{advantage.title}</h4>
+                <p className="text-white/70 text-sm leading-relaxed">{advantage.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Vision Statement */}
+        <div className="mt-20 text-center">
+          <div className="card bg-gradient-to-r from-finance-green/10 to-finance-blue/5 border-finance-green/30 max-w-4xl mx-auto">
+            <Zap className="w-8 h-8 text-finance-green mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              "To build India's most innovative student capital management firm - where rigorous analysis meets bold execution, 
+              and every trade is a step toward institutional excellence. We dream of the day when NH66 Capital stands alongside 
+              the world's premier investment management firms."
+            </p>
+            <div className="flex justify-center space-x-8 text-sm text-white/60">
+              <span>• World-Class Standards</span>
+              <span>• Student Innovation</span>
+              <span>• Market Leadership</span>
             </div>
           </div>
         </div>
