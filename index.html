@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Capital - Student Investment Fund</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>NEXUS<span class="accent">CAPITAL</span></h1>
+                    <span class="tagline">Student Investment Fund</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#markets" class="nav-link">Markets</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#performance" class="nav-link">Performance</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Smart Investments.<br><span class="accent">Smarter Returns.</span></h1>
+                <p>Student-managed investment fund generating consistent returns through data-driven strategies and innovative portfolio management.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">$2.4M</span>
+                        <span class="stat-label">Assets Under Management</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">+18.7%</span>
+                        <span class="stat-label">YTD Returns</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">156</span>
+                        <span class="stat-label">Active Investors</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Invest Now</button>
+                    <button class="btn-secondary">View Portfolio</button>
+                </div>
+            </div>
+            <div class="hero-chart">
+                <canvas id="heroChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Overview -->
+    <section id="markets" class="market-overview">
+        <div class="container">
+            <h2>Market Overview</h2>
+            <div class="market-ticker">
+                <div class="ticker-item">
+                    <span class="ticker-symbol">S&P 500</span>
+                    <span class="ticker-price">4,567.89</span>
+                    <span class="ticker-change positive">+1.23%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-symbol">NASDAQ</span>
+                    <span class="ticker-price">14,123.45</span>
+                    <span class="ticker-change positive">+0.87%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-symbol">DOW</span>
+                    <span class="ticker-price">34,890.12</span>
+                    <span class="ticker-change negative">-0.45%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-symbol">VIX</span>
+                    <span class="ticker-price">18.76</span>
+                    <span class="ticker-change positive">+2.14%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-symbol">GOLD</span>
+                    <span class="ticker-price">2,156.78</span>
+                    <span class="ticker-change positive">+0.92%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="ticker-symbol">BTC</span>
+                    <span class="ticker-price">67,234.89</span>
+                    <span class="ticker-change positive">+3.45%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Current Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-allocation">
+                    <h3>Asset Allocation</h3>
+                    <canvas id="allocationChart"></canvas>
+                </div>
+                <div class="portfolio-performance">
+                    <h3>Performance Metrics</h3>
+                    <div class="metrics-grid">
+                        <div class="metric">
+                            <span class="metric-label">Total Return</span>
+                            <span class="metric-value positive">+24.7%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Sharpe Ratio</span>
+                            <span class="metric-value">1.84</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Beta</span>
+                            <span class="metric-value">0.92</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Max Drawdown</span>
+                            <span class="metric-value negative">-8.2%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="holdings-table">
+                <h3>Top Holdings</h3>
+                <table class="holdings">
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Company</th>
+                            <th>Shares</th>
+                            <th>Market Value</th>
+                            <th>% of Portfolio</th>
+                            <th>Day Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="symbol">AAPL</td>
+                            <td>Apple Inc.</td>
+                            <td>1,247</td>
+                            <td>$234,567</td>
+                            <td>9.8%</td>
+                            <td class="positive">+1.23%</td>
+                        </tr>
+                        <tr>
+                            <td class="symbol">MSFT</td>
+                            <td>Microsoft Corp.</td>
+                            <td>856</td>
+                            <td>$198,432</td>
+                            <td>8.3%</td>
+                            <td class="positive">+0.87%</td>
+                        </tr>
+                        <tr>
+                            <td class="symbol">GOOGL</td>
+                            <td>Alphabet Inc.</td>
+                            <td>1,234</td>
+                            <td>$187,654</td>
+                            <td>7.8%</td>
+                            <td class="negative">-0.45%</td>
+                        </tr>
+                        <tr>
+                            <td class="symbol">AMZN</td>
+                            <td>Amazon.com Inc.</td>
+                            <td>923</td>
+                            <td>$156,789</td>
+                            <td>6.5%</td>
+                            <td class="positive">+2.14%</td>
+                        </tr>
+                        <tr>
+                            <td class="symbol">NVDA</td>
+                            <td>NVIDIA Corp.</td>
+                            <td>432</td>
+                            <td>$143,210</td>
+                            <td>6.0%</td>
+                            <td class="positive">+4.56%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="performance">
+        <div class="container">
+            <h2>Fund Performance</h2>
+            <div class="performance-chart">
+                <canvas id="performanceChart"></canvas>
+            </div>
+            <div class="performance-stats">
+                <div class="stat-card">
+                    <h4>1 Year</h4>
+                    <span class="stat-value positive">+24.7%</span>
+                </div>
+                <div class="stat-card">
+                    <h4>3 Years</h4>
+                    <span class="stat-value positive">+67.3%</span>
+                </div>
+                <div class="stat-card">
+                    <h4>5 Years</h4>
+                    <span class="stat-value positive">+127.8%</span>
+                </div>
+                <div class="stat-card">
+                    <h4>Since Inception</h4>
+                    <span class="stat-value positive">+189.4%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Nexus Capital</h2>
+                    <p>Founded in 2019 by a group of ambitious finance students, Nexus Capital represents the next generation of investment management. Our student-run fund combines academic rigor with real-world market experience.</p>
+                    <p>We employ quantitative analysis, fundamental research, and innovative strategies to generate consistent alpha for our investors while providing invaluable learning experiences for our student managers.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Data-Driven Strategies</h4>
+                            <p>Advanced algorithms and quantitative models guide our investment decisions.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Risk Management</h4>
+                            <p>Sophisticated risk controls and diversification strategies protect capital.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Educational Excellence</h4>
+                            <p>Real-world experience combined with academic oversight and mentorship.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-section">
+                    <h3>Leadership Team</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-photo"></div>
+                            <h4>Sarah Chen</h4>
+                            <span>Chief Investment Officer</span>
+                            <p>MBA Finance, 3 years experience at Goldman Sachs</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"></div>
+                            <h4>Michael Rodriguez</h4>
+                            <span>Head of Research</span>
+                            <p>PhD Economics, Former McKinsey Analyst</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"></div>
+                            <h4>Emily Thompson</h4>
+                            <span>Risk Manager</span>
+                            <p>MS Financial Engineering, Ex-JP Morgan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get Started</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to Invest?</h3>
+                    <p>Join our growing community of smart investors. Minimum investment: $1,000</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>invest@nexuscapital.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Wall Street, New York, NY 10005</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Investment Amount</option>
+                            <option value="1000-5000">$1,000 - $5,000</option>
+                            <option value="5000-25000">$5,000 - $25,000</option>
+                            <option value="25000-100000">$25,000 - $100,000</option>
+                            <option value="100000+">$100,000+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message (Optional)" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Start Investing</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NEXUS<span class="accent">CAPITAL</span></h4>
+                    <p>Student Investment Fund</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#">Portfolio Management</a></li>
+                        <li><a href="#">Investment Advisory</a></li>
+                        <li><a href="#">Risk Assessment</a></li>
+                        <li><a href="#">Research Reports</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimers</a></li>
+                        <li><a href="#">Regulatory</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nexus Capital Student Investment Fund. All rights reserved.</p>
+                <p><small>Securities offered through Nexus Capital. Member FINRA/SIPC. This is a student-managed fund for educational purposes.</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
