@@ -25,16 +25,56 @@
     @apply bg-finance-green hover:bg-finance-green/90 text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-finance-green/25;
   }
   
+  .btn-primary-small {
+    @apply bg-finance-green hover:bg-finance-green/90 text-black font-semibold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-finance-green/25 text-sm;
+  }
+  
+  .btn-primary-large {
+    @apply bg-finance-green hover:bg-finance-green/90 text-black font-bold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-finance-green/30 text-lg;
+  }
+  
   .btn-secondary {
     @apply border border-finance-green text-finance-green hover:bg-finance-green hover:text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
   }
   
+  .btn-secondary-small {
+    @apply border border-finance-green text-finance-green hover:bg-finance-green hover:text-black font-medium px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 text-sm;
+  }
+  
   .btn-outline {
-    @apply border border-white/20 text-white hover:bg-white/10 font-medium px-4 py-2 rounded-md transition-all duration-300;
+    @apply border border-white/20 text-white hover:bg-white/10 hover:border-finance-green/50 font-medium px-4 py-2 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-ghost {
+    @apply text-white/80 hover:text-finance-green hover:bg-finance-green/10 font-medium px-4 py-2 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-danger {
+    @apply bg-finance-red hover:bg-finance-red/90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-icon {
+    @apply w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110;
+  }
+  
+  .btn-icon-primary {
+    @apply btn-icon bg-finance-green/20 text-finance-green hover:bg-finance-green hover:text-black;
+  }
+  
+  .btn-icon-secondary {
+    @apply btn-icon border border-white/20 text-white/70 hover:border-finance-green/50 hover:text-finance-green;
   }
   
   .card {
     @apply bg-dark-50/50 backdrop-blur-sm border border-dark-200/50 rounded-xl p-6 hover:border-finance-green/30 transition-all duration-300;
+  }
+  
+  .card-interactive {
+    @apply card hover:scale-[1.02] hover:shadow-xl hover:shadow-black/20 cursor-pointer;
+  }
+  
+  .card-highlight {
+    @apply card bg-gradient-to-br from-finance-green/10 to-finance-blue/5 border-finance-green/30;
   }
   
   .metric-card {
@@ -77,6 +117,49 @@
   .loading-skeleton {
     @apply animate-pulse bg-dark-200/20 rounded;
   }
+  
+  /* Input styles */
+  .input-primary {
+    @apply w-full px-4 py-3 bg-dark-100/50 border border-dark-200/30 rounded-lg focus:outline-none focus:border-finance-green text-white placeholder-white/50 transition-all duration-300;
+  }
+  
+  .input-error {
+    @apply input-primary border-finance-red focus:border-finance-red;
+  }
+  
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-success {
+    @apply badge bg-finance-green/20 text-finance-green;
+  }
+  
+  .badge-warning {
+    @apply badge bg-yellow-500/20 text-yellow-400;
+  }
+  
+  .badge-danger {
+    @apply badge bg-finance-red/20 text-finance-red;
+  }
+  
+  .badge-info {
+    @apply badge bg-finance-blue/20 text-finance-blue;
+  }
+  
+  /* Tag styles */
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-lg text-sm font-medium border transition-all duration-300;
+  }
+  
+  .tag-default {
+    @apply tag bg-dark-100/50 border-dark-200/30 text-white/80 hover:border-finance-green/50;
+  }
+  
+  .tag-active {
+    @apply tag bg-finance-green/20 border-finance-green/50 text-finance-green;
+  }
 }
 
 @layer utilities {
@@ -99,6 +182,19 @@
   
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-finance-green/20;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
   }
 }
 
@@ -154,6 +250,26 @@
   }
 }
 
+.animate-ticker {
+  animation: ticker 60s linear infinite;
+}
+
+/* Mobile navigation animations */
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
 /* Loading animations */
 @keyframes shimmer {
   0% {
@@ -168,4 +284,104 @@
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+}
+
+/* Fade in animations */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+/* Scale bounce animation */
+@keyframes scale-bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-scale-bounce {
+  animation: scale-bounce 0.3s ease-in-out;
+}
+
+/* Pulse glow effect */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Slideshow animation */
+@keyframes slideshow {
+  0%, 20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  25%, 95% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideshow {
+  animation: slideshow 15s infinite;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .btn-primary, .btn-secondary {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .btn-primary-large {
+    @apply px-6 py-3 text-base;
+  }
+  
+  .card {
+    @apply p-4;
+  }
+  
+  .metric-card {
+    @apply p-3;
+  }
 } 
